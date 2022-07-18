@@ -1,0 +1,10 @@
+body {
+  display: flex;
+  font-size: 32px;
+  font-family: "Arvo", serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 97vh;
+  justify-content: center;
+  align-items: center;
+}
