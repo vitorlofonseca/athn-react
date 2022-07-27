@@ -1,8 +1,6 @@
-import { setCssVariable } from "../utils/setCssVariable";
+const lightThemeColors = [
+  ["primary", "#000"],
+  ["background", "#fff"],
+];
 
-const setLightThemeColors = () => {
-  setCssVariable("--primary", "#000");
-  setCssVariable("--background", "#fff");
-};
-
-export { setLightThemeColors };
+export { lightThemeColors };
