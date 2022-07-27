@@ -1,5 +1,4 @@
 .c-button {
-  width: 490px;
   height: 40px;
   left: 331px;
   border-radius: 28px;
@@ -10,6 +9,18 @@
   color: var(--black);
   transition-duration: 0.4s;
   width: 100%;
+
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.c-icon {
+  margin: 0 20px 0 20px;
+  width: 20px;
+  height: 20px;
 }
 
 .c-button:hover {

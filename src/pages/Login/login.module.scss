@@ -56,4 +56,52 @@
   img {
     cursor: pointer;
   }
+
+  &--small-screen {
+    display: none;
+  }
+}
+
+.c-sso-button {
+  margin-bottom: 20px;
+}
+
+.c-copyright {
+  position: absolute;
+  color: var(--grey-4);
+  bottom: 25px;
+}
+
+@media screen and (max-width: $medium) {
+  .l-page {
+    height: 85vh;
+    border-radius: 0px 0px 38px 38px;
+  }
+
+  .l-body {
+    padding-top: unset;
+    width: 80vw;
+  }
+
+  .c-athn-subtitle {
+    margin: 1vh 0 1vh 0;
+  }
+
+  .c-signin-button {
+    margin: 20px 0 20px 0;
+  }
+
+  .c-account-creation {
+    margin: 0 0 60px 0;
+  }
+
+  .l-sso-login {
+    display: none;
+
+    &--small-screen {
+      display: block;
+      margin-top: 20px;
+      width: 100%;
+    }
+  }
 }

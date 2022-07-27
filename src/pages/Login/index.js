@@ -26,6 +26,18 @@ const Login = () => {
           <Icon className={styles["c-icon"]} name="apple-grey"></Icon>
           <Icon className={styles["c-icon"]} name="google"></Icon>
         </div>
+        <div className={styles["l-sso-login--small-screen"]}>
+          <Button className={styles["c-sso-button"]} icon="facebook">
+            Continue with facebook
+          </Button>
+          <Button className={styles["c-sso-button"]} icon="apple-black">
+            Continue with Apple
+          </Button>
+          <Button className={styles["c-sso-button"]} icon="google">
+            Continue with Google
+          </Button>
+        </div>
+        <span className={styles["c-copyright"]}>Athena 2022 Copyright</span>
       </div>
     </div>
   );
