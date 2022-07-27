@@ -3,17 +3,8 @@ body {
 }
 
 .l-app {
-  display: flex;
-  font-size: 32px;
   font-family: "Arvo", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
-  justify-content: center;
-  align-items: center;
-}
-
-.l-app {
-  background-color: var(--background);
-  color: var(--primary);
+  font-size: 14px;
 }

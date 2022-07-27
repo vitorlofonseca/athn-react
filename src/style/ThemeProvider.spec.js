@@ -2,8 +2,8 @@ import React from "react";
 import { render, act } from "@testing-library/react";
 import { ThemeProvider, ThemeContext } from "./ThemeProvider";
 import { THEMES } from "./themes.enum";
-import { lightThemeColors } from "./colors/LightThemeColors";
-import { darkThemeColors } from "./colors/DarkThemeColors";
+import { lightThemeColors } from "./colors/LightTheme";
+import { darkThemeColors } from "./colors/DarkTheme";
 
 Object.defineProperty(document, "documentElement", {
   value: {

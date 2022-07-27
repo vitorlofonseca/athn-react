@@ -1,0 +1,49 @@
+.l-page {
+  display: flex;
+  height: 100vh;
+  align-items: center;
+  background-color: var(--primary);
+  color: var(--white);
+  flex-direction: column;
+}
+
+.c-athn-title {
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 59px;
+  letter-spacing: -0.11em;
+}
+
+.c-athn-subtitle {
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 31px;
+}
+
+.c-email {
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+.c-signin-button {
+  margin-top: 50px;
+}
+
+.c-account-creation {
+  margin: 10px 0 20px 0;
+
+  a {
+    color: var(--white);
+  }
+}
+
+.l-sso-login {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 40px;
+  width: 490px;
+
+  img {
+    cursor: pointer;
+  }
+}

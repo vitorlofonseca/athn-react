@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
-import { lightThemeColors } from "./colors/LightThemeColors";
-import { darkThemeColors } from "./colors/DarkThemeColors";
+import { lightThemeColors } from "./colors/LightTheme";
+import { darkThemeColors } from "./colors/DarkTheme";
 import { THEMES } from "./themes.enum";
 import { setCssVariable } from "./utils/setCssVariable";
 

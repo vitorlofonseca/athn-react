@@ -1,0 +1,24 @@
+.c-button {
+  width: 490px;
+  height: 40px;
+  left: 331px;
+  border-radius: 28px;
+  border: none;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--black);
+  transition-duration: 0.4s;
+}
+
+.c-button:hover {
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+.c-button:active {
+  transform: scale(0.96);
+  box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);
+}

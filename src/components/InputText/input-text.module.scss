@@ -1,0 +1,29 @@
+.l-input-wrapper {
+  border: 1px solid var(--white);
+  display: flex;
+}
+
+.c-input-text {
+  border: none;
+  background-color: var(--primary);
+  width: 490px;
+  height: 40px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: var(--white);
+  padding-left: 20px;
+}
+
+.c-icon {
+  padding-left: 20px;
+}
+
+::placeholder {
+  color: var(--white);
+  opacity: 1; /* Firefox */
+}
+
+input:focus {
+  outline: none;
+}
