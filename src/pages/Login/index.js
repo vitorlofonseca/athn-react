@@ -37,8 +37,8 @@ const Login = () => {
             Continue with Google
           </Button>
         </div>
-        <span className={styles["c-copyright"]}>Athena 2022 Copyright</span>
       </div>
+      <div className={styles["c-copyright"]}>Athena 2022 Copyright</div>
     </div>
   );
 };

@@ -2,17 +2,18 @@
 
 .l-page {
   display: flex;
+  flex-direction: column;
   background-color: var(--primary);
   color: var(--white);
   height: 100vh;
-  justify-content: center;
+  align-items: center;
 }
 
 .l-body {
   display: flex;
   align-items: center;
-  height: 100vh;
   width: 60vw;
+  max-width: 600px;
   padding-top: 10vh;
   flex-direction: column;
 }
@@ -67,14 +68,12 @@
 }
 
 .c-copyright {
-  position: absolute;
-  color: var(--grey-4);
-  bottom: 25px;
+  display: none;
 }
 
 @media screen and (max-width: $medium) {
   .l-page {
-    height: 85vh;
+    height: 700px;
     border-radius: 0px 0px 38px 38px;
   }
 
@@ -102,6 +101,20 @@
       display: block;
       margin-top: 20px;
       width: 100%;
+    }
+  }
+
+  .c-copyright {
+    display: block;
+    color: var(--grey-4);
+    margin-top: 80px;
+    padding-bottom: 30px;
+
+    @media screen and (min-height: 800px) {
+      padding-bottom: unset;
+      margin-top: unset;
+      position: absolute;
+      bottom: 30px;
     }
   }
 }
