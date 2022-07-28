@@ -3,6 +3,7 @@ import styles from "./login.module.scss";
 import { InputText } from "../../components/InputText";
 import { Button } from "../../components/Button";
 import { Icon } from "../../components/Icon";
+import { ROUTES } from "../../routing/routes";
 
 const Login = () => {
   return (
@@ -16,7 +17,11 @@ const Login = () => {
           className={styles["c-email"]}
         ></InputText>
         <InputText placeholder="Password" icon="key"></InputText>
-        <Button className={styles["c-signin-button"]}>Sign In</Button>
+
+        <Button className={styles["c-signin-button"]} route={ROUTES.home}>
+          Sign In
+        </Button>
+
         <span className={styles["c-account-creation"]}>
           Don't you have an account? <a href="g">Sign up</a>
         </span>

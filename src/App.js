@@ -2,7 +2,7 @@ import React from "react";
 import "./App.scss";
 import { ThemeContext } from "./style/ThemeProvider";
 import { THEMES } from "./style/themes.enum";
-import { Login } from "./pages/Login";
+import { RouterOutlet } from "./routing/RouterOutlet";
 
 function App() {
   const { theme, setTheme } = React.useContext(ThemeContext);
@@ -10,7 +10,7 @@ function App() {
   return (
     <div className={theme + " l-app"}>
       <div>
-        <Login></Login>
+        <RouterOutlet></RouterOutlet>
         <button
           onClick={() =>
             setTheme(theme === THEMES.dark ? THEMES.light : THEMES.dark)
