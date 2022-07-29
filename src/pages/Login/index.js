@@ -15,8 +15,13 @@ const Login = () => {
           placeholder="Email"
           icon="email"
           className={styles["c-email"]}
+          type="text"
         ></InputText>
-        <InputText placeholder="Password" icon="key"></InputText>
+        <InputText
+          placeholder="Password"
+          icon="key"
+          type="password"
+        ></InputText>
 
         <Button className={styles["c-signin-button"]} route={ROUTES.home}>
           Sign In
