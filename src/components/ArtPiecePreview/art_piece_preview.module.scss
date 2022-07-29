@@ -1,0 +1,17 @@
+.c-art-piece-preview {
+  border: 1px solid var(--font);
+  padding-bottom: 15px;
+
+  img {
+    width: 260px;
+    height: 203px;
+  }
+
+  .c-art-name {
+    margin: 8px 0 6px 13px;
+  }
+
+  .c-art-data {
+    margin: 5px 0 0 13px;
+  }
+}
