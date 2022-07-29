@@ -1,0 +1,64 @@
+.general {
+  font-weight: 400;
+  margin: unset;
+}
+
+h1 {
+  @extend .general;
+  font-size: 101px;
+  line-height: 125px;
+  letter-spacing: -0.015em;
+}
+
+h2 {
+  @extend .general;
+  font-size: 63px;
+  line-height: 78px;
+  letter-spacing: -0.005em;
+}
+
+h3 {
+  @extend .general;
+  font-size: 50px;
+  line-height: 62px;
+}
+
+h4 {
+  @extend .general;
+  font-size: 36px;
+  line-height: 44px;
+}
+
+h5 {
+  @extend .general;
+  font-size: 25px;
+  line-height: 31px;
+}
+
+h6 {
+  @extend .general;
+  font-size: 21px;
+  line-height: 26px;
+  letter-spacing: 0.0015em;
+}
+
+.body-1 {
+  @extend .general;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0.005em;
+}
+
+.body-2 {
+  @extend .general;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.0025em;
+}
+
+.caption {
+  @extend .general;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.004em;
+}
