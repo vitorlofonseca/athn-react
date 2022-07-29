@@ -1,0 +1,16 @@
+.c-artist-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 159px;
+
+  img {
+    width: 109px;
+    height: 109px;
+    border-radius: 60px;
+  }
+
+  &__name {
+    margin-top: 9px;
+  }
+}
