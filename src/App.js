@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.scss";
+import "./style/fonts.scss";
 import { ThemeContext } from "./style/ThemeProvider";
 import { THEMES } from "./style/themes.enum";
 import { RouterOutlet } from "./routing/RouterOutlet";

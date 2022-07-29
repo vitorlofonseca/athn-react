@@ -1,0 +1,65 @@
+@import "../../style/breakpoints.scss";
+
+.l-page {
+  margin: 0 0 30px 48px;
+}
+
+.l-curation-section {
+  margin-top: 37px;
+  height: 100%;
+  color: var(--font);
+
+  h5 {
+    margin-bottom: 17px;
+  }
+
+  .l-curation-pieces {
+    overflow: scroll;
+    display: flex;
+    gap: 20px;
+    padding-right: 48px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.l-best-seller-artists-section {
+  margin-top: 37px;
+  color: var(--font);
+
+  h5 {
+    margin-bottom: 17px;
+  }
+
+  .l-best-seller-artists {
+    overflow: scroll;
+    display: flex;
+    padding-right: 48px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
+
+.l-best-auctions-section {
+  margin-top: 37px;
+  color: var(--font);
+
+  h5 {
+    margin-bottom: 17px;
+  }
+
+  .l-best-auctions-pieces {
+    overflow: scroll;
+    display: flex;
+    gap: 20px;
+    padding-right: 48px;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}
