@@ -1,3 +1,5 @@
+@import "../../style/breakpoints.scss";
+
 .c-art-piece-preview {
   border: 1px solid var(--font);
   padding-bottom: 15px;
@@ -13,5 +15,23 @@
 
   .c-art-data {
     margin: 5px 0 0 13px;
+  }
+}
+
+@media screen and (min-width: $medium) {
+  .c-art-piece-preview {
+    img {
+      width: 40vw;
+      height: unset;
+    }
+  }
+}
+
+@media screen and (min-width: $large) {
+  .c-art-piece-preview {
+    img {
+      width: 28vw;
+      max-width: 377px;
+    }
   }
 }

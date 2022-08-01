@@ -4,16 +4,20 @@
   margin: 0 0 30px 48px;
 }
 
-.l-curation-section {
+.l-curation-section,
+.l-best-auctions-section {
   margin-top: 37px;
   height: 100%;
   color: var(--font);
+  max-width: 1225px;
 
   h5 {
     margin-bottom: 17px;
   }
 
+  .l-best-auctions-pieces,
   .l-curation-pieces {
+    max-width: 1200px;
     overflow: scroll;
     display: flex;
     gap: 20px;
@@ -28,6 +32,8 @@
 .l-best-seller-artists-section {
   margin-top: 37px;
   color: var(--font);
+  width: 100%;
+  max-width: 1225px;
 
   h5 {
     margin-bottom: 17px;
@@ -44,22 +50,38 @@
   }
 }
 
-.l-best-auctions-section {
-  margin-top: 37px;
-  color: var(--font);
-
-  h5 {
-    margin-bottom: 17px;
+@media screen and (min-width: $medium) {
+  .l-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
-  .l-best-auctions-pieces {
-    overflow: scroll;
+  .l-curation-section,
+  .l-best-auctions-section {
     display: flex;
-    gap: 20px;
-    padding-right: 48px;
+    flex-direction: column;
+    align-items: center;
 
-    &::-webkit-scrollbar {
-      display: none;
+    h5 {
+      width: 100%;
+    }
+
+    .l-best-auctions-pieces,
+    .l-curation-pieces {
+      flex-wrap: wrap;
+      overflow: unset;
+      flex-flow: wrap;
+    }
+  }
+
+  .l-best-seller-artists-section {
+    .l-best-seller-artists {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      row-gap: 40px;
     }
   }
 }

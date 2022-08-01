@@ -17,6 +17,11 @@ const Home = () => {
             <ArtPiecePreview></ArtPiecePreview>
             <ArtPiecePreview></ArtPiecePreview>
             <ArtPiecePreview></ArtPiecePreview>
+            <ArtPiecePreview></ArtPiecePreview>
+            <ArtPiecePreview></ArtPiecePreview>
+            <ArtPiecePreview></ArtPiecePreview>
+            <ArtPiecePreview></ArtPiecePreview>
+            <ArtPiecePreview></ArtPiecePreview>
           </div>
         </div>
 
@@ -29,6 +34,14 @@ const Home = () => {
             <ArtistPreview></ArtistPreview>
             <ArtistPreview></ArtistPreview>
             <ArtistPreview></ArtistPreview>
+            <ArtistPreview></ArtistPreview>
+            <ArtistPreview></ArtistPreview>
+            <ArtistPreview></ArtistPreview>
+            <ArtistPreview></ArtistPreview>
+            <ArtistPreview></ArtistPreview>
+            <ArtistPreview></ArtistPreview>
+            <ArtistPreview></ArtistPreview>
+            <ArtistPreview></ArtistPreview>
           </div>
         </div>
 
@@ -36,6 +49,8 @@ const Home = () => {
           <h5>Auctions</h5>
 
           <div className={styles["l-best-auctions-pieces"]}>
+            <ArtPiecePreview></ArtPiecePreview>
+            <ArtPiecePreview></ArtPiecePreview>
             <ArtPiecePreview></ArtPiecePreview>
             <ArtPiecePreview></ArtPiecePreview>
             <ArtPiecePreview></ArtPiecePreview>
