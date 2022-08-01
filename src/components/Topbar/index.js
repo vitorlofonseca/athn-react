@@ -1,6 +1,7 @@
 import styles from "./topbar.module.scss";
 import { InputText } from "../../components/InputText";
 import { useEffect } from "react";
+import { Icon } from "../Icon";
 
 const MIN_HEIGHT = 170;
 const MAX_HEIGHT = 270;
@@ -92,7 +93,13 @@ const Topbar = () => {
   return (
     <div className={styles["c-topbar"]}>
       <div className={styles["c-topbar__background"]}>
-        <h1 className={styles["c-athn-title"]}>athn</h1>
+        <div className={styles["c-header"]}>
+          <h1 className={styles["c-header__title"]}>athn</h1>
+          <Icon
+            className={styles["c-header__hamburger-menu"]}
+            name="navigation/hamburger-menu"
+          ></Icon>
+        </div>
         <div className={styles["c-welcoming"]}>
           <h3 className="body-1">Hello Carolyn</h3>
           <h6>Let's find masterpiece art?</h6>
