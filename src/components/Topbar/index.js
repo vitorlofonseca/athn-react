@@ -18,7 +18,8 @@ at less 0, and at maximum 100. Dividing it by 100, the result will
 be from 0 to 1, what is the proper value to opacity 
 */
 const calculateOpacity = (topbarSizeAccordingScroll) => {
-  return (topbarSizeAccordingScroll - MIN_HEIGHT) / 100;
+  const newOpacity = (topbarSizeAccordingScroll - MIN_HEIGHT) / 100;
+  return newOpacity > 0.8 ? 1 : newOpacity;
 };
 
 const setTopbarToReducedMode = (
