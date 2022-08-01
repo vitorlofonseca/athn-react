@@ -42,8 +42,8 @@ const setTopbarToVariableMode = (
   search_box
 ) => {
   topbar.style.position = "unset";
-  welcoming.style.display = "block";
-  search_box.style.display = "block";
+  welcoming.style.display = "flex";
+  search_box.style.display = "flex";
   topbar_background.style.height = "100%";
 };
 

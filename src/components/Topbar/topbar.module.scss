@@ -1,3 +1,5 @@
+@import "../../style/breakpoints.scss";
+
 .c-topbar {
   display: flex;
   flex-direction: column;
@@ -26,6 +28,8 @@
 
 .c-wrapper-search-box {
   margin: 0 48px 0 48px;
+  display: flex;
+  justify-content: center;
 
   .c-search-box {
     margin-top: 25px;
@@ -34,6 +38,8 @@
 }
 
 .c-welcoming {
+  display: flex;
+  flex-direction: column;
   margin: 0 48px 0 48px;
 
   h3 {
@@ -42,5 +48,18 @@
 
   h6 {
     margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: $small) {
+  .c-welcoming {
+    align-items: center;
+  }
+
+  .c-wrapper-search-box {
+    margin: unset;
+    .c-search-box {
+      max-width: 396px;
+    }
   }
 }
