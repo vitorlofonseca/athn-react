@@ -32,18 +32,36 @@ const Login = () => {
         </span>
         <span>or</span>
         <div className={styles["l-sso-login"]}>
-          <Icon className={styles["c-icon"]} name="facebook-white"></Icon>
-          <Icon className={styles["c-icon"]} name="apple-grey"></Icon>
-          <Icon className={styles["c-icon"]} name="google"></Icon>
+          <Icon
+            className={styles["c-icon"]}
+            name="social-networks/facebook-white"
+          ></Icon>
+          <Icon
+            className={styles["c-icon"]}
+            name="social-networks/apple-grey"
+          ></Icon>
+          <Icon
+            className={styles["c-icon"]}
+            name="social-networks/google"
+          ></Icon>
         </div>
         <div className={styles["l-sso-login--small-screen"]}>
-          <Button className={styles["c-sso-button"]} icon="facebook">
+          <Button
+            className={styles["c-sso-button"]}
+            icon="social-networks/facebook"
+          >
             Continue with facebook
           </Button>
-          <Button className={styles["c-sso-button"]} icon="apple-black">
+          <Button
+            className={styles["c-sso-button"]}
+            icon="social-networks/apple-black"
+          >
             Continue with Apple
           </Button>
-          <Button className={styles["c-sso-button"]} icon="google">
+          <Button
+            className={styles["c-sso-button"]}
+            icon="social-networks/google"
+          >
             Continue with Google
           </Button>
         </div>
