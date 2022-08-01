@@ -100,7 +100,7 @@ const Topbar = () => {
         <div className={styles["c-wrapper-search-box"]}>
           <InputText
             placeholder="Type to search"
-            icon="magnifier"
+            icon="accessibility/magnifier"
             className={styles["c-search-box"]}
             type="text"
           ></InputText>

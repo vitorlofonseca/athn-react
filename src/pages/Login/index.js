@@ -13,13 +13,13 @@ const Login = () => {
         <h3 className={styles["c-athn-subtitle"]}>Welcome to athn</h3>
         <InputText
           placeholder="Email"
-          icon="email"
+          icon="social-networks/email"
           className={styles["c-email"]}
           type="text"
         ></InputText>
         <InputText
           placeholder="Password"
-          icon="key"
+          icon="accessibility/key"
           type="password"
         ></InputText>
 
