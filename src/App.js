@@ -16,7 +16,7 @@ function App() {
           onClick={() =>
             setTheme(theme === THEMES.dark ? THEMES.light : THEMES.dark)
           }
-          style={{ position: "absolute", top: 0, right: 0 }}
+          style={{ position: "absolute", top: 0, left: 0 }}
         >
           Change theme
         </button>
