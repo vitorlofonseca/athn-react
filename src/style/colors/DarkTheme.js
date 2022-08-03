@@ -5,6 +5,7 @@ const darkThemeColors = commonColors.concat([
   ["background", "#2F2F2F"],
   ["font", "var(--white)"],
   ["grey-4", "#B0B0B0"],
+  ["red", "#DA4E4E"],
 ]);
 
 export { darkThemeColors };

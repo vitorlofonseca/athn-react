@@ -4,6 +4,9 @@ import "./style/fonts.scss";
 import { ThemeContext } from "./style/ThemeProvider";
 import { THEMES } from "./style/themes.enum";
 import { RouterOutlet } from "./routing/RouterOutlet";
+import { registerMockServer } from "./services/http-mock-server/mock-server";
+
+registerMockServer();
 
 function App() {
   const { theme, setTheme } = React.useContext(ThemeContext);

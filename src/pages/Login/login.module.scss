@@ -49,6 +49,12 @@
   }
 }
 
+.c-required-fields-message,
+.c-unauthorized-message {
+  margin-top: 10px;
+  color: var(--red--dark-theme);
+}
+
 .l-sso-login {
   display: flex;
   justify-content: space-around;

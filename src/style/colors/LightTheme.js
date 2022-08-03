@@ -5,6 +5,7 @@ const lightThemeColors = commonColors.concat([
   ["background", "#F4FBFB"],
   ["font", "var(--black)"],
   ["grey-4", "#646464"],
+  ["red", "#9E0F0F"],
 ]);
 
 export { lightThemeColors };
