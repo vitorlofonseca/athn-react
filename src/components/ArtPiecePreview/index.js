@@ -1,22 +1,23 @@
 import styles from "./art_piece_preview.module.scss";
 
-const ArtPiecePreview = () => {
+const ArtPiecePreview = ({ piece }) => {
   return (
     <div className={styles["c-art-piece-preview"]}>
-      <img
-        src="https://www.artnews.com/wp-content/uploads/2021/02/SK-C-5.jpg?w=1200"
-        alt="Art piece"
-      ></img>
-      <div className={styles["c-art-name"]}>
-        <span className="body-1">The night watch </span>
-        <span className="caption">by Rembrandt</span>
-      </div>
-      <div className={styles["c-art-data"] + " caption"}>Date: 1642</div>
-      <div className={styles["c-art-data"] + " caption"}>
-        Dimensions: 363cm × 437cm
+      <img src={piece.image} alt="Art piece"></img>
+      <div className={styles["c-art-creation"]}>
+        <div className={styles["c-art-name"] + " body-1"}>{piece.name} </div>
+        <div className={styles["c-art-artist"] + " caption"}>
+          &nbsp;by {piece.artist}
+        </div>
       </div>
       <div className={styles["c-art-data"] + " caption"}>
-        From Rijksmuseum, Netherlands
+        Date: {piece.year}
+      </div>
+      <div className={styles["c-art-data"] + " caption"}>
+        Dimensions: {piece.height} × {piece.width}
+      </div>
+      <div className={styles["c-art-data"] + " caption"}>
+        From {piece.city}, {piece.country}
       </div>
     </div>
   );

@@ -3,14 +3,29 @@
 .c-art-piece-preview {
   border: 1px solid var(--font);
   padding-bottom: 15px;
+  width: 28vw;
+  min-width: 286px;
 
   img {
-    width: 260px;
+    width: 100%;
     height: 203px;
+    object-fit: cover;
   }
 
-  .c-art-name {
-    margin: 8px 0 6px 13px;
+  .c-art-creation {
+    display: flex;
+    margin: 8px 13px 6px 13px;
+    align-items: center;
+
+    .c-art-name {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .c-art-artist {
+      white-space: nowrap;
+    }
   }
 
   .c-art-data {
@@ -20,18 +35,6 @@
 
 @media screen and (min-width: $medium) {
   .c-art-piece-preview {
-    img {
-      width: 40vw;
-      height: unset;
-    }
-  }
-}
-
-@media screen and (min-width: $large) {
-  .c-art-piece-preview {
-    img {
-      width: 28vw;
-      max-width: 377px;
-    }
+    max-width: 377px;
   }
 }

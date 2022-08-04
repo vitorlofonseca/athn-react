@@ -1,4 +1,6 @@
 import { createServer, Response } from "miragejs";
+import { mockedArtPieces } from "./mocked-art-pieces";
+import { mockedArtists } from "./mocked-artists";
 
 const registerMockServer = () => {
   if (window.server) {
@@ -24,6 +26,10 @@ const registerMockServer = () => {
 
         return new Response(200, {}, {});
       });
+
+      this.get("/api/arts/curation", () => mockedArtPieces);
+      this.get("/api/arts/auctions", () => mockedArtPieces);
+      this.get("/api/artists/best-sellers", () => mockedArtists);
     },
   });
 };

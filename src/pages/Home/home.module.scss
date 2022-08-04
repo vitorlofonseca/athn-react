@@ -54,14 +54,12 @@
   .l-page {
     display: flex;
     flex-direction: column;
-    align-items: center;
   }
 
   .l-curation-section,
   .l-best-auctions-section {
     display: flex;
     flex-direction: column;
-    align-items: center;
 
     h5 {
       width: 100%;
@@ -83,5 +81,11 @@
       align-items: center;
       row-gap: 40px;
     }
+  }
+}
+
+@media screen and (min-width: $large) {
+  .l-page {
+    align-items: center;
   }
 }
