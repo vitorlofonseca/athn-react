@@ -26,6 +26,7 @@ const calculateOpacity = (topbarSizeAccordingScroll) => {
 };
 
 const setTopbarToReducedMode = (
+  reducedModeIsFixed,
   topbar,
   topbar_background,
   welcoming,
@@ -34,8 +35,15 @@ const setTopbarToReducedMode = (
   topbar.style.position = "sticky";
   topbar.style.top = "0";
   topbar_background.style.height = "70px";
-  welcoming.style.display = "none";
-  search_box.style.display = "none";
+
+  if (welcoming && search_box) {
+    welcoming.style.display = "none";
+    search_box.style.display = "none";
+  }
+
+  if (reducedModeIsFixed) {
+    topbar.style.height = "70px";
+  }
 };
 
 const setTopbarToVariableMode = (
@@ -50,15 +58,21 @@ const setTopbarToVariableMode = (
   topbar_background.style.height = "100%";
 };
 
-const Topbar = () => {
+const Topbar = ({ collapsisable = false }) => {
   const [sideMenuVisible, setSideMenuVisible] = React.useState(false);
 
   useEffect(() => {
+    const topbar_background = document.querySelector(
+      `.${styles["c-topbar__background"]}`
+    );
+    const topbar = document.querySelector(`.${styles["c-topbar"]}`);
+
+    if (!collapsisable) {
+      setTopbarToReducedMode(!collapsisable, topbar, topbar_background);
+      return;
+    }
+
     const storeScroll = () => {
-      const topbar_background = document.querySelector(
-        `.${styles["c-topbar__background"]}`
-      );
-      const topbar = document.querySelector(`.${styles["c-topbar"]}`);
       const welcoming = document.querySelector(`.${styles["c-welcoming"]}`);
       const search_box = document.querySelector(
         `.${styles["c-wrapper-search-box"]}`
@@ -68,6 +82,7 @@ const Topbar = () => {
 
       if (topbarSizeAccordingScroll < MIN_HEIGHT) {
         setTopbarToReducedMode(
+          !collapsisable,
           topbar,
           topbar_background,
           welcoming,
@@ -92,7 +107,7 @@ const Topbar = () => {
     };
 
     document.addEventListener("scroll", storeScroll);
-  }, []);
+  }, [collapsisable]);
 
   return (
     <>
@@ -106,18 +121,22 @@ const Topbar = () => {
               onClick={() => setSideMenuVisible(true)}
             />
           </div>
-          <div className={styles["c-welcoming"]}>
-            <h3 className="body-1">Hello Carolyn</h3>
-            <h6>Let's find masterpiece art?</h6>
-          </div>
-          <div className={styles["c-wrapper-search-box"]}>
-            <InputText
-              placeholder="Type to search"
-              icon="accessibility/magnifier"
-              className={styles["c-search-box"]}
-              type="text"
-            ></InputText>
-          </div>
+          {collapsisable && (
+            <>
+              <div className={styles["c-welcoming"]}>
+                <h3 className="body-1">Hello Carolyn</h3>
+                <h6>Let's find masterpiece art?</h6>
+              </div>
+              <div className={styles["c-wrapper-search-box"]}>
+                <InputText
+                  placeholder="Type to search"
+                  icon="accessibility/magnifier"
+                  className={styles["c-search-box"]}
+                  type="text"
+                ></InputText>
+              </div>
+            </>
+          )}
         </div>
       </div>
     </>

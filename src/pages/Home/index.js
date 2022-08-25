@@ -31,7 +31,7 @@ const Home = () => {
 
   return (
     <div>
-      <Topbar></Topbar>
+      <Topbar collapsisable={true} />
 
       <div className={styles["l-page"]}>
         <div className={styles["l-curation-section"]}>
