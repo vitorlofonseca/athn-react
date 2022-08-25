@@ -9,6 +9,8 @@ import { ReactComponent as SignOut } from "../../assets/icons/navigation/sign-ou
 import { MenuItem } from "./MenuItem";
 import { ThemeContext } from "../../style/ThemeProvider";
 import { THEMES } from "../../style/themes.enum";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../routing/routes";
 
 const blockScroll = () => {
   const body = document.querySelector("body");
@@ -30,6 +32,7 @@ const openSideMenu = () => {
 };
 
 const SideMenu = ({ setVisible }) => {
+  const navigate = useNavigate();
   const { theme, setTheme } = React.useContext(ThemeContext);
 
   React.useEffect(() => {
@@ -71,7 +74,11 @@ const SideMenu = ({ setVisible }) => {
           </div>
         </div>
         <div className={styles["c-menu-items"]}>
-          <MenuItem name={"Favorites"} icon={<FavoritesIcon />} />
+          <MenuItem
+            name={"Favorites"}
+            icon={<FavoritesIcon />}
+            onClick={() => navigate(ROUTES.favorites)}
+          />
           <MenuItem name={"Configurations"} icon={<WrenchIcon />} />
           <MenuItem name={"Orders"} icon={<CardIcon />} />
           <MenuItem name={"Followed Artists"} icon={<PersonIcon />} />
