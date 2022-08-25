@@ -7,6 +7,8 @@ import { ReactComponent as WrenchIcon } from "../../assets/icons/utilities/wrenc
 import { ReactComponent as PersonIcon } from "../../assets/icons/utilities/person.svg";
 import { ReactComponent as SignOut } from "../../assets/icons/navigation/sign-out.svg";
 import { MenuItem } from "./MenuItem";
+import { ThemeContext } from "../../style/ThemeProvider";
+import { THEMES } from "../../style/themes.enum";
 
 const blockScroll = () => {
   const body = document.querySelector("body");
@@ -28,6 +30,8 @@ const openSideMenu = () => {
 };
 
 const SideMenu = ({ setVisible }) => {
+  const { theme, setTheme } = React.useContext(ThemeContext);
+
   React.useEffect(() => {
     openSideMenu();
 
@@ -71,6 +75,12 @@ const SideMenu = ({ setVisible }) => {
           <MenuItem name={"Configurations"} icon={<WrenchIcon />} />
           <MenuItem name={"Orders"} icon={<CardIcon />} />
           <MenuItem name={"Followed Artists"} icon={<PersonIcon />} />
+          <MenuItem
+            name={"[Temporary] Change Theme"}
+            onClick={() =>
+              setTheme(theme === THEMES.dark ? THEMES.light : THEMES.dark)
+            }
+          />
         </div>
         <div className={styles["c-menu-items--bottom"]}>
           <MenuItem name={"Sign out"} icon={<SignOut />} />

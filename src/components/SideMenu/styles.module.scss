@@ -33,6 +33,8 @@
     }
 
     &__close-sidebar {
+      cursor: pointer;
+
       path {
         stroke: var(--font);
       }
