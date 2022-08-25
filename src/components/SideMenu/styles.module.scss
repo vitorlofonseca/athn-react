@@ -1,0 +1,117 @@
+.blocked-scroll {
+  overflow: hidden;
+}
+
+.c-side-menu {
+  position: absolute;
+  background-color: var(--black-transparent);
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 2;
+
+  .c-side-bar {
+    color: var(--font);
+    position: absolute;
+    height: 100vh;
+    width: 0px;
+    transition: width 0.6s;
+    right: 0;
+
+    &--opened {
+      width: 362px;
+    }
+
+    border: 1px;
+    background: var(--background);
+    border-left: 1px solid var(--font);
+
+    &__options {
+      margin: 20px 30px;
+      display: flex;
+      justify-content: flex-end;
+    }
+
+    &__close-sidebar {
+      path {
+        stroke: var(--font);
+      }
+    }
+
+    .c-user {
+      display: flex;
+      margin: 30px 30px;
+
+      img {
+        min-width: 99px;
+        width: 99px;
+        height: 99px;
+        border: 1px solid var(--font);
+        border-radius: 50px;
+      }
+
+      &__information {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 8px;
+        margin-left: 10px;
+
+        h6 {
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .c-menu-item {
+      border-bottom: solid 1px var(--grey-4);
+      border-top: none;
+      display: flex;
+      align-items: center;
+      padding: 15px 43px;
+
+      &__icon {
+        margin-right: 12px;
+        svg path {
+          stroke: var(--font);
+        }
+      }
+
+      &__label {
+        white-space: nowrap;
+      }
+    }
+
+    .c-menu-item:first-of-type {
+      border-top: solid 1px var(--grey-4);
+    }
+
+    .c-menu-items {
+      &--bottom {
+        width: 100%;
+        position: absolute;
+        bottom: 50px;
+
+        .c-menu-item {
+          color: var(--red);
+
+          &__icon {
+            svg path {
+              stroke: var(--red);
+            }
+          }
+        }
+      }
+    }
+
+    .c-copyright {
+      white-space: nowrap;
+      width: 100%;
+      color: var(--grey-4);
+      display: flex;
+      justify-content: center;
+      position: absolute;
+      bottom: 14px;
+    }
+  }
+}

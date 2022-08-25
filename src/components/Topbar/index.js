@@ -1,7 +1,9 @@
+import React from "react";
 import styles from "./topbar.module.scss";
 import { InputText } from "../../components/InputText";
 import { useEffect } from "react";
-import { Icon } from "../Icon";
+import { SideMenu } from "../SideMenu";
+import { ReactComponent as HamburgerMenu } from "../../assets/icons/navigation/hamburger-menu.svg";
 
 const MIN_HEIGHT = 170;
 const MAX_HEIGHT = 270;
@@ -49,6 +51,8 @@ const setTopbarToVariableMode = (
 };
 
 const Topbar = () => {
+  const [sideMenuVisible, setSideMenuVisible] = React.useState(false);
+
   useEffect(() => {
     const storeScroll = () => {
       const topbar_background = document.querySelector(
@@ -91,29 +95,32 @@ const Topbar = () => {
   }, []);
 
   return (
-    <div className={styles["c-topbar"]}>
-      <div className={styles["c-topbar__background"]}>
-        <div className={styles["c-header"]}>
-          <h1 className={styles["c-header__title"]}>athn</h1>
-          <Icon
-            className={styles["c-header__hamburger-menu"]}
-            name="navigation/hamburger-menu"
-          ></Icon>
-        </div>
-        <div className={styles["c-welcoming"]}>
-          <h3 className="body-1">Hello Carolyn</h3>
-          <h6>Let's find masterpiece art?</h6>
-        </div>
-        <div className={styles["c-wrapper-search-box"]}>
-          <InputText
-            placeholder="Type to search"
-            icon="accessibility/magnifier"
-            className={styles["c-search-box"]}
-            type="text"
-          ></InputText>
+    <>
+      {sideMenuVisible && <SideMenu setVisible={setSideMenuVisible}></SideMenu>}
+      <div className={styles["c-topbar"]}>
+        <div className={styles["c-topbar__background"]}>
+          <div className={styles["c-header"]}>
+            <h1 className={styles["c-header__title"]}>athn</h1>
+            <HamburgerMenu
+              className={styles["c-header__hamburger-menu"]}
+              onClick={() => setSideMenuVisible(true)}
+            />
+          </div>
+          <div className={styles["c-welcoming"]}>
+            <h3 className="body-1">Hello Carolyn</h3>
+            <h6>Let's find masterpiece art?</h6>
+          </div>
+          <div className={styles["c-wrapper-search-box"]}>
+            <InputText
+              placeholder="Type to search"
+              icon="accessibility/magnifier"
+              className={styles["c-search-box"]}
+              type="text"
+            ></InputText>
+          </div>
         </div>
       </div>
-    </div>
+    </>
   );
 };
 
