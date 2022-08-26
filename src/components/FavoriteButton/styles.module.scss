@@ -1,0 +1,11 @@
+.c-favorite-icon {
+  cursor: pointer;
+
+  &--enabled {
+    fill: var(--red);
+  }
+
+  path {
+    stroke: var(--font);
+  }
+}

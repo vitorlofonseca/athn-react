@@ -1,14 +1,16 @@
 import styles from "./art_piece_preview.module.scss";
+import { FavoritesButton } from "../../components/FavoriteButton";
 
 const ArtPiecePreview = ({ piece }) => {
   return (
     <div className={styles["c-art-piece-preview"]}>
       <img src={piece.image} alt="Art piece"></img>
-      <div className={styles["c-art-creation"]}>
+      <div className={styles["l-art-heading"]}>
         <div className={styles["c-art-name"] + " body-1"}>{piece.name} </div>
-        <div className={styles["c-art-artist"] + " caption"}>
-          &nbsp;by {piece.artist}
-        </div>
+        <FavoritesButton enabled={piece.favorite} />
+      </div>
+      <div className={styles["c-art-data"] + " caption"}>
+        Artist: {piece.artist}
       </div>
       <div className={styles["c-art-data"] + " caption"}>
         Date: {piece.year}

@@ -66,7 +66,7 @@ const mockedArtPieces = [
   },
   {
     id: 6,
-    favorite: true,
+    favorite: false,
     name: "Monalisa",
     artist: "Leonardo da Vinci",
     year: "1503",

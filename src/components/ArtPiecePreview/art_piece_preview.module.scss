@@ -14,18 +14,15 @@
     object-fit: cover;
   }
 
-  .c-art-creation {
+  .l-art-heading {
     display: flex;
     margin: 8px 13px 6px 13px;
     align-items: center;
+    justify-content: space-between;
 
     .c-art-name {
       text-overflow: ellipsis;
       overflow: hidden;
-      white-space: nowrap;
-    }
-
-    .c-art-artist {
       white-space: nowrap;
     }
   }
