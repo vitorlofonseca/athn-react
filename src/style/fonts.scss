@@ -1,3 +1,5 @@
+@import "./breakpoints.scss";
+
 .general {
   font-weight: 400;
   margin: unset;
@@ -61,4 +63,11 @@ h6 {
   font-size: 12px;
   line-height: 15px;
   letter-spacing: 0.004em;
+}
+
+@media screen and (max-width: $small) {
+  h4 {
+    font-size: 25px;
+    line-height: 31px;
+  }
 }

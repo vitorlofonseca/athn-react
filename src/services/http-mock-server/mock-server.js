@@ -30,6 +30,7 @@ const registerMockServer = () => {
       this.get("/api/arts/curation", () => mockedArtPieces);
       this.get("/api/arts/auctions", () => mockedArtPieces);
       this.get("/api/artists/best-sellers", () => mockedArtists);
+      this.get("/api/arts/favorites", () => mockedArtPieces);
     },
   });
 };

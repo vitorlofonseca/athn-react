@@ -1,0 +1,13 @@
+@import "../../style/breakpoints.scss";
+
+.c-title {
+  width: 100%;
+  color: var(--font);
+}
+
+.c-favorite-pieces {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}

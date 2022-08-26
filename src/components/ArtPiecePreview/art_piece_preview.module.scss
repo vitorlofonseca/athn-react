@@ -1,10 +1,12 @@
 @import "../../style/breakpoints.scss";
 
 .c-art-piece-preview {
+  flex-grow: 1;
   border: 1px solid var(--font);
   padding-bottom: 15px;
   width: 28vw;
-  min-width: 286px;
+  min-width: 260px;
+  color: var(--font);
 
   img {
     width: 100%;

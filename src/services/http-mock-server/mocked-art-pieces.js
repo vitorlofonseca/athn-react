@@ -1,6 +1,7 @@
 const mockedArtPieces = [
   {
     id: 1,
+    favorite: true,
     name: "The night watch",
     artist: "Rembrandt",
     year: "1642",
@@ -13,6 +14,7 @@ const mockedArtPieces = [
   },
   {
     id: 2,
+    favorite: true,
     name: "Basket of Fruit",
     artist: "Caravaggio",
     year: "1599",
@@ -25,6 +27,7 @@ const mockedArtPieces = [
   },
   {
     id: 3,
+    favorite: true,
     name: "Storm of the sea of Galilee",
     artist: "Rembrandt",
     year: "1633",
@@ -37,6 +40,7 @@ const mockedArtPieces = [
   },
   {
     id: 4,
+    favorite: true,
     name: "Untitled",
     artist: "Raoul de Keyser",
     year: "1968",
@@ -49,6 +53,7 @@ const mockedArtPieces = [
   },
   {
     id: 5,
+    favorite: true,
     name: "Séjour",
     artist: "Raoul de Keyser",
     year: "2011",
@@ -61,6 +66,7 @@ const mockedArtPieces = [
   },
   {
     id: 6,
+    favorite: true,
     name: "Monalisa",
     artist: "Leonardo da Vinci",
     year: "1503",
