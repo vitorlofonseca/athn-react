@@ -4,6 +4,8 @@ import { InputText } from "../../components/InputText";
 import { useEffect } from "react";
 import { SideMenu } from "../SideMenu";
 import { ReactComponent as HamburgerMenu } from "../../assets/icons/navigation/hamburger-menu.svg";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "../../routing/routes";
 
 const MIN_HEIGHT = 170;
 const MAX_HEIGHT = 270;
@@ -59,6 +61,7 @@ const setTopbarToVariableMode = (
 };
 
 const Topbar = ({ collapsisable = false }) => {
+  const navigate = useNavigate();
   const [sideMenuVisible, setSideMenuVisible] = React.useState(false);
 
   useEffect(() => {
@@ -115,7 +118,12 @@ const Topbar = ({ collapsisable = false }) => {
       <div className={styles["c-topbar"]}>
         <div className={styles["c-topbar__background"]}>
           <div className={styles["c-header"]}>
-            <h1 className={styles["c-header__title"]}>athn</h1>
+            <h1
+              className={styles["c-header__title"]}
+              onClick={() => navigate(ROUTES.home)}
+            >
+              athn
+            </h1>
             <HamburgerMenu
               className={styles["c-header__hamburger-menu"]}
               onClick={() => setSideMenuVisible(true)}
