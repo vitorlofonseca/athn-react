@@ -35,6 +35,41 @@ const mockedArtists = [
     image:
       "https://uploads8.wikiart.org/temp/fe0fb46d-ffe3-4077-9f74-6b61afe83dd8.jpg!Portrait.jpg",
   },
+  {
+    id: 7,
+    name: "Salvador Dali",
+    image: "https://uploads5.wikiart.org/images/salvador-dali.jpg!Portrait.jpg",
+  },
+  {
+    id: 8,
+    name: "Pablo Picasso",
+    image:
+      "http://cdn.cnn.com/cnnnext/dam/assets/151207113238-pablo-picasso-color.jpg",
+  },
+  {
+    id: 9,
+    name: "Gustav Klimt",
+    image:
+      "https://historia.nationalgeographic.com.es/medio/2021/07/13/gustav-klimt-fotografia-tomada-en-1916_4f9a5fd0_550x705.jpg",
+  },
+  {
+    id: 10,
+    name: "Vincent van Gogh",
+    image:
+      "https://i.pinimg.com/736x/ce/3e/41/ce3e41da098730a2f11e2e1b99a888a3.jpg",
+  },
+  {
+    id: 11,
+    name: "Edvard Munch",
+    image:
+      "https://cdn.culturagenial.com/imagens/edvard-munch-e-as-suas-11-telas-celebres-og.jpg",
+  },
+  {
+    id: 12,
+    name: "Claude Monet",
+    image:
+      "http://1.bp.blogspot.com/-Y-yX3UkoSoQ/Uve-Km0KYCI/AAAAAAAAChQ/EdEwjtV1mfQ/s1600/claude-monet.jpg",
+  },
 ];
 
 export { mockedArtists };
