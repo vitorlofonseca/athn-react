@@ -4,4 +4,10 @@ const getBestSellers = async () => {
   return await response.json();
 };
 
-export { getBestSellers };
+const getFollowedArtists = async () => {
+  const response = await fetch("/api/artists/followed");
+
+  return await response.json();
+};
+
+export { getBestSellers, getFollowedArtists };

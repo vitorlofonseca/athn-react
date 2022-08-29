@@ -81,7 +81,11 @@ const SideMenu = ({ setVisible }) => {
           />
           <MenuItem name={"Configurations"} icon={<WrenchIcon />} />
           <MenuItem name={"Orders"} icon={<CardIcon />} />
-          <MenuItem name={"Followed Artists"} icon={<PersonIcon />} />
+          <MenuItem
+            name={"Followed Artists"}
+            icon={<PersonIcon />}
+            onClick={() => navigate(ROUTES.followed_artists)}
+          />
           <MenuItem
             name={"[Temporary] Change Theme"}
             onClick={() =>
