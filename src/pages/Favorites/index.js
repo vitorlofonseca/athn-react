@@ -21,7 +21,7 @@ const Favorites = () => {
       <Topbar />
 
       <PageContainer>
-        <h4 className={styles["c-title"]}>Favorites</h4>
+        <h5 className={styles["c-title"]}>Favorites</h5>
 
         <div className={styles["c-favorite-pieces"]}>
           {favorites &&
