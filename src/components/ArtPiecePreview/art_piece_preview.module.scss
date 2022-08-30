@@ -1,10 +1,9 @@
 @import "../../style/breakpoints.scss";
 
 .c-art-piece-preview {
-  flex-grow: 1;
   border: 1px solid var(--font);
   padding-bottom: 15px;
-  width: 28vw;
+  width: 100%;
   min-width: 260px;
   color: var(--font);
 
@@ -29,11 +28,5 @@
 
   .c-art-data {
     margin: 5px 0 0 13px;
-  }
-}
-
-@media screen and (min-width: $medium) {
-  .c-art-piece-preview {
-    max-width: 377px;
   }
 }
