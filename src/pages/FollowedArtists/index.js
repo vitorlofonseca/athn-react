@@ -4,6 +4,7 @@ import { PageContainer } from "../../components/PageContainer";
 import React, { useEffect } from "react";
 import { getFollowedArtists } from "../../services/artists";
 import { ArtistPreview } from "../../components/ArtistPreview";
+import { Button } from "../../components/Button";
 
 const FollowedArtists = () => {
   const [followedArtists, setFollowedArtists] = React.useState();
@@ -29,6 +30,14 @@ const FollowedArtists = () => {
               <ArtistPreview key={artist.id} artist={artist} />
             ))}
         </div>
+
+        <Button
+          type="primary"
+          className={styles["c-search-more-artists"]}
+          onClick={() => {}}
+        >
+          Search for more artists
+        </Button>
       </PageContainer>
     </>
   );
