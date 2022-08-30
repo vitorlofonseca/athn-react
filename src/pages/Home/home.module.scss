@@ -17,10 +17,12 @@
 
   .l-best-auctions-pieces,
   .l-curation-pieces {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+
     max-width: 1200px;
     overflow: scroll;
-    display: flex;
-    gap: 20px;
     padding-right: 48px;
 
     &::-webkit-scrollbar {
@@ -50,6 +52,18 @@
   }
 }
 
+@media screen and (max-width: $medium) {
+  .l-curation-section,
+  .l-best-auctions-section {
+    .l-best-auctions-pieces,
+    .l-curation-pieces {
+      display: flex;
+      overflow: scroll;
+      flex-flow: nowrap;
+    }
+  }
+}
+
 @media screen and (min-width: $medium) {
   .l-page {
     display: flex;
@@ -58,18 +72,12 @@
 
   .l-curation-section,
   .l-best-auctions-section {
+    width: 100%;
     display: flex;
     flex-direction: column;
 
     h5 {
       width: 100%;
-    }
-
-    .l-best-auctions-pieces,
-    .l-curation-pieces {
-      flex-wrap: wrap;
-      overflow: unset;
-      flex-flow: wrap;
     }
   }
 
