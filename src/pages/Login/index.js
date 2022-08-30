@@ -7,6 +7,8 @@ import { ROUTES } from "../../routing/routes";
 import { login } from "../../services/user";
 import { useNavigate } from "react-router-dom";
 import { LoadingScreen } from "../../components/LoadingScreen";
+import { ReactComponent as EmailIcon } from "../../assets/icons/social-networks/email.svg";
+import { ReactComponent as KeyIcon } from "../../assets/icons/accessibility/key.svg";
 
 const LOGIN_STATUS_UNAUTHORIZED = "unauthorized";
 const LOGIN_STATUS_FIELDS_REQUIRED = "fields_required";
@@ -65,14 +67,15 @@ const Login = () => {
         <h3 className={styles["c-athn-subtitle"]}>Welcome to athn</h3>
         <InputText
           placeholder="Email"
-          icon="social-networks/email"
-          className={styles["c-email"]}
+          icon={<EmailIcon />}
+          className={styles["c-email"] + " " + styles["c-input-text"]}
           type="text"
           onChange={(e) => setUsername(e.target.value)}
         ></InputText>
         <InputText
           placeholder="Password"
-          icon="accessibility/key"
+          icon={<KeyIcon />}
+          className={styles["c-input-text"]}
           type="password"
           onChange={(e) => setPassword(e.target.value)}
         ></InputText>

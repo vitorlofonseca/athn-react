@@ -4,6 +4,7 @@ import { InputText } from "../../components/InputText";
 import { useEffect } from "react";
 import { SideMenu } from "../SideMenu";
 import { ReactComponent as HamburgerMenu } from "../../assets/icons/navigation/hamburger-menu.svg";
+import { ReactComponent as MagnifierIcon } from "../../assets/icons/accessibility/magnifier.svg";
 import { useNavigate } from "react-router-dom";
 import { ROUTES } from "../../routing/routes";
 
@@ -138,7 +139,7 @@ const Topbar = ({ collapsisable = false }) => {
               <div className={styles["c-wrapper-search-box"]}>
                 <InputText
                   placeholder="Type to search"
-                  icon="accessibility/magnifier"
+                  icon={<MagnifierIcon />}
                   className={styles["c-search-box"]}
                   type="text"
                 ></InputText>

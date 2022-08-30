@@ -1,4 +1,3 @@
-import { Icon } from "../Icon";
 import styles from "./input-text.module.scss";
 
 const InputText = ({
@@ -10,7 +9,7 @@ const InputText = ({
 }) => {
   return (
     <div className={`${styles["l-input-wrapper"]} ${className}`}>
-      {icon && <Icon className={styles["c-icon"]} name={icon}></Icon>}
+      {icon && <div className={styles["c-icon"]}>{icon}</div>}
       <input
         className={styles["c-input-text"]}
         placeholder={placeholder}

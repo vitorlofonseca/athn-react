@@ -32,6 +32,15 @@
   line-height: 31px;
 }
 
+.c-input-text {
+  color: var(--white);
+  border-color: var(--white);
+
+  ::placeholder {
+    color: var(--white);
+  }
+}
+
 .c-email {
   margin-top: 25px;
   margin-bottom: 20px;
