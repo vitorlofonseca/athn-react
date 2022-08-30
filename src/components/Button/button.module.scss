@@ -34,4 +34,9 @@
     width: 20px;
     height: 20px;
   }
+
+  &--primary {
+    color: var(--white);
+    background-color: var(--primary);
+  }
 }
