@@ -47,6 +47,11 @@
   .c-search-box {
     margin-top: 25px;
     margin-bottom: 20px;
+    border-color: var(--white);
+
+    ::placeholder {
+      color: var(--white);
+    }
   }
 }
 

@@ -1,7 +1,12 @@
 .l-input-wrapper {
-  border: 1px solid var(--white);
+  border: 1px solid var(--font);
   display: flex;
   width: 100%;
+
+  ::placeholder {
+    color: var(--font);
+    opacity: 1; /* Firefox */
+  }
 }
 
 .c-input-text {
@@ -11,7 +16,7 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 17px;
-  color: var(--white);
+  color: var(--font);
   padding-left: 20px;
   width: 100%;
   font-family: "Arvo", serif;
@@ -23,9 +28,4 @@
 
 .c-icon {
   padding-left: 20px;
-}
-
-::placeholder {
-  color: var(--white);
-  opacity: 1; /* Firefox */
 }
